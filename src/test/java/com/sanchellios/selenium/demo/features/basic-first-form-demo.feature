@@ -1,4 +1,4 @@
-@simple-input
+@simple-form
 Feature: Input fields of https://www.seleniumeasy.com/test/basic-first-form-demo.html
 
   @positive

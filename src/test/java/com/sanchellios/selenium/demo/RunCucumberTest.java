@@ -11,7 +11,8 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/java/com/sanchellios/selenium/demo/features"},
-        plugin = {"pretty"})
+        plugin = {"pretty"},
+        tags = {"@simple-form"})
 public class RunCucumberTest {
     private static Logger log = LogManager.getLogger();
 

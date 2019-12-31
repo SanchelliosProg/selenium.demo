@@ -10,9 +10,9 @@ public class Hooks {
     Logger log = LogManager.getLogger(Hooks.class);
 
 
-    @Before("@simple-input")
+    @Before("@simple-form")
     public void goToPage() {
-        log.info("Going to page with Simple input via HOOK");
+        log.info("Going to page with Simple forms via HOOK");
         SeleniumWebDriverContext.getInstance().getWebDriver().get("https://www.seleniumeasy.com/test/basic-first-form-demo.html");
     }
 
