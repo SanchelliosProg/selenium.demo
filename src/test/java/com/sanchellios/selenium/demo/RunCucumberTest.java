@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/java/com/sanchellios/selenium/demo/features"},
         plugin = {"pretty"},
-        tags = {"@simple-form"})
+        tags = {"@checkbox"})
 public class RunCucumberTest {
     private static Logger log = LogManager.getLogger();
 

@@ -18,6 +18,7 @@ public class InputFieldsDefs {
     public InputFieldsDefs() {
         log.info("Going to initialize page " + SimpleInputPage.class);
         this.page = PageFactory.initElements(getInstance().getWebDriver(), SimpleInputPage.class);
+        page.navigateTo();
     }
 
     @When("enter {string} into the single input field")

@@ -4,9 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SimpleInputPage {
-
-    private WebDriver driver;
+public class SimpleInputPage extends Page {
+    private final String URL = "https://www.seleniumeasy.com/test/basic-first-form-demo.html";
 
     @FindBy(css = "input#user-message")
     WebElement singleInput;
@@ -30,7 +29,12 @@ public class SimpleInputPage {
     WebElement totalResultLabel;
 
     public SimpleInputPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
+    }
+
+    @Override
+    public void navigateTo() {
+        driver.get(URL);
     }
 
     public void enterTextToSingleInput(String input) {
