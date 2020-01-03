@@ -9,4 +9,9 @@ public class Hooks {
 
     Logger log = LogManager.getLogger(Hooks.class);
 
+    @Before
+    public void setupTests() {
+        SeleniumWebDriverContext.getInstance().getWebDriver().manage().window().maximize();
+    }
+
 }
