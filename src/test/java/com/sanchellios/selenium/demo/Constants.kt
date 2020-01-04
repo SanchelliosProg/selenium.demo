@@ -1,6 +1,7 @@
 package com.sanchellios.selenium.demo
 
 object Urls {
+    const val INPUT_FROM_SUBMIT_PAGE_URL = "https://www.seleniumeasy.com/test/input-form-demo.html"
     const val CHECKBOX_PAGE_URL = "https://www.seleniumeasy.com/test/basic-checkbox-demo.html";
     const val SELECT_DROPDOWN_PAGE_URL = "https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html"
     const val SIMPLE_INPUT_PAGE_URL =  "https://www.seleniumeasy.com/test/basic-first-form-demo.html"
@@ -52,4 +53,23 @@ object SelectDropdownListPageLocators {
 
     const val FIRST_SELECTED_BUTTON_CSS = "button#printMe"
     const val GET_ALL_SELECTED_BUTTON_CSS = "button#printAll"
+}
+
+object InputFormSubmitPageLocators {
+    const val FIRST_NAME_FIELD_CSS = "input[name=first_name]"
+    const val LAST_NAME_FIELD_CSS = "input[name=last_name]"
+    const val EMAIL_FIELD_CSS = "input[name=email]"
+    const val PHONE_FIELD_CSS = "input[name=phone]"
+    const val ADDRESS_FIELD_CSS = "input[name=address]"
+    const val CITY_FIELD_CSS = "input[name=city]"
+    const val ZIP_CODE_FIELD_CSS = "input[name=zip]"
+    const val WEBSITE_DOMAIN_NAME_FIELD_CSS = "input[name=website]"
+    const val POST_DESCRIPTION_FIELD = "textarea[name=comment]"
+
+    const val HOSTING_YES_RADIO_BUTTON = "input[name=hosting][value=yes]"
+    const val HOSTING_NO_RADIO_BUTTON = "input[name=hosting][value=no]"
+
+    const val STATE_SELECT_CSS = "select[name=state]"
+
+    const val SEND_BUTTON_CSS = "button.btn.btn-default"
 }

@@ -18,7 +18,6 @@ public class CheckboxDefs {
     public CheckboxDefs() {
         log.info("Starting the tests of " + CheckboxPage.class);
         this.page = PageFactory.initElements(getInstance().getWebDriver(), CheckboxPage.class);
-        page.navigateTo();
     }
 
     @When("click on single checkbox")

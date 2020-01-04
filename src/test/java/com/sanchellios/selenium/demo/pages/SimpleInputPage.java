@@ -9,7 +9,6 @@ public class SimpleInputPage extends Page {
 
     public SimpleInputPage(WebDriver driver) {
         super(driver);
-        navigateTo();
     }
 
     @Override

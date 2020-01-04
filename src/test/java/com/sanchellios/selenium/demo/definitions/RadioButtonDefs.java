@@ -14,7 +14,6 @@ public class RadioButtonDefs {
 
     public RadioButtonDefs() {
         this.page = PageFactory.initElements(getInstance().getWebDriver(), RadioButtonPage.class);
-        page.navigateTo();
     }
 
     @When("select {string} radio-button")
