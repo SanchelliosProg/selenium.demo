@@ -1,94 +1,63 @@
 package com.sanchellios.selenium.demo.pages;
 
+import com.sanchellios.selenium.demo.Urls;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+
+import static com.sanchellios.selenium.demo.RadioButtonPageLocators.*;
 
 public class RadioButtonPage extends Page {
 
-    @FindBy(css = "input[value=Male][name=optradio]")
-    WebElement maleRadioSimple;
-
-    @FindBy(css = "input[value=Female][name=optradio]")
-    WebElement femaleRadioSimple;
-
-    @FindBy(css = "button#buttoncheck")
-    WebElement getCheckedValueButton;
-
-    @FindBy(css = "div.panel-body > button")
-    WebElement getValuesButton;
-
-    @FindBy(css = "p.radiobutton")
-    WebElement radioButtonDemoLabel;
-
-    @FindBy(css = "input[name=gender][value=Male]")
-    WebElement maleSexButton;
-
-    @FindBy(css = "input[name=gender][value=Female]")
-    WebElement femaleSexButton;
-
-    @FindBy(css = "input[name=ageGroup][value='0 - 5']")
-    WebElement radio0to5;
-
-    @FindBy(css = "input[name=ageGroup][value='5 - 15']")
-    WebElement radio5to15;
-
-    @FindBy(css = "input[name=ageGroup][value='15 - 50']")
-    WebElement radio15to50;
-
-    @FindBy(css = "p.groupradiobutton")
-    WebElement resultLabel;
-
     public RadioButtonPage(WebDriver driver) {
         super(driver);
+        navigateTo();
     }
 
     @Override
     public void navigateTo() {
-        driver.get("https://www.seleniumeasy.com/test/basic-radiobutton-demo.html");
+        driver.get(Urls.RADIO_BUTTON_PAGE_URL);
     }
 
     public void selectSimpleMaleRadio() {
-        maleRadioSimple.click();
+        findByCss(MALE_RADIO_SIMPLE_CSS).click();
     }
 
     public void selectSimpleFemaleRadio() {
-        femaleRadioSimple.click();
+        findByCss(FEMALE_RADIO_SIMPLE_CSS).click();
     }
 
     public void clickGetCheckedValueButton() {
-        getCheckedValueButton.click();
+        findByCss(GET_CHECKED_VALUE_BUTTON_CSS).click();
     }
 
     public void clickGetValuesButton() {
-        getValuesButton.click();
+        findByCss(GET_VALUES_BUTTON).click();
     }
 
     public void clickMaleSexButton() {
-        maleSexButton.click();
+        findByCss(MALE_SEX_BUTTON_CSS).click();
     }
 
     public void clickFemaleSexButton() {
-        femaleSexButton.click();
+        findByCss(FEMALE_SEX_BUTTON_CSS).click();
     }
 
     public void clickRadio0to5() {
-        radio0to5.click();
+        findByCss(RADIO_0_TO_5_CSS).click();
     }
 
     public void clickRadio5to15() {
-        radio5to15.click();
+        findByCss(RADIO_5_TO_15_CSS).click();
     }
 
     public void clickRadio15to50() {
-        radio15to50.click();
+        findByCss(RADIO_15_TO_50_CSS).click();
     }
 
     public String getTextOfRadioButtonDemoLabel() {
-        return radioButtonDemoLabel.getText();
+        return findByCss(RADIO_BUTTON_DEMO_LABEL_CSS).getText();
     }
 
     public String getResultLabelText() {
-        return resultLabel.getText();
+        return findByCss(RESULT_LABEL_CSS).getText();
     }
 }

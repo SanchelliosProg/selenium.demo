@@ -1,5 +1,7 @@
 @simple-form
-Feature: Input fields of https://www.seleniumeasy.com/test/basic-first-form-demo.html
+Feature: This would be your first example to start with Selenium.
+  The tag input specifies an input field where the user can enter data.
+  https://www.seleniumeasy.com/test/basic-first-form-demo.html
 
   @positive
   Scenario: Enter value into Single Input Field and press button

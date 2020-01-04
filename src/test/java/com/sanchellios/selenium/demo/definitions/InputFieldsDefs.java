@@ -7,9 +7,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.support.PageFactory;
 
-import static com.sanchellios.selenium.demo.SeleniumWebDriverContext.*;
-import static org.hamcrest.MatcherAssert.*;
-import static org.hamcrest.Matchers.*;
+import static com.sanchellios.selenium.demo.SeleniumWebDriverContext.getInstance;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class InputFieldsDefs {
     private Logger log = LogManager.getLogger(InputFieldsDefs.class);

@@ -1,7 +1,6 @@
 package com.sanchellios.selenium.demo;
 
 import cucumber.api.CucumberOptions;
-
 import cucumber.api.junit.Cucumber;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -11,8 +10,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"src/test/java/com/sanchellios/selenium/demo/features"},
-        plugin = {"pretty"},
-        tags = {"@radio-button"})
+        plugin = {"pretty"}
+//        , tags = {"@select-dropdown-list-feature"}
+        )
 public class RunCucumberTest {
     private static Logger log = LogManager.getLogger();
 

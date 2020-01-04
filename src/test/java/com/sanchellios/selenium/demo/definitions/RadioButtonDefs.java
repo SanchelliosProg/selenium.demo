@@ -3,11 +3,11 @@ package com.sanchellios.selenium.demo.definitions;
 import com.sanchellios.selenium.demo.pages.RadioButtonPage;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
 import org.openqa.selenium.support.PageFactory;
 
 import static com.sanchellios.selenium.demo.SeleniumWebDriverContext.getInstance;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class RadioButtonDefs {
     private RadioButtonPage page;
@@ -48,7 +48,7 @@ public class RadioButtonDefs {
     @Then("label with text {string} should appear")
     public void label_with_text_should_appear(String expectedText) {
         String actualText = page.getTextOfRadioButtonDemoLabel();
-        MatcherAssert.assertThat(actualText, Matchers.equalTo(expectedText));
+        assertThat(actualText, equalTo(expectedText));
     }
 
     @When("select sex: {string} radio-button")
@@ -85,7 +85,7 @@ public class RadioButtonDefs {
     @Then("result label contains text: {string}")
     public void first_line_of_result_contains_text(String expectedText) {
         String actualText = page.getResultLabelText();
-        MatcherAssert.assertThat(actualText, Matchers.equalTo(expectedText));
+        assertThat(actualText, equalTo(expectedText));
     }
 
 }

@@ -1,5 +1,6 @@
 package com.sanchellios.selenium.demo.pages;
 
+import com.sanchellios.selenium.demo.Urls;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -7,19 +8,17 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class CheckboxPage extends Page {
-    private final String URL = "https://www.seleniumeasy.com/test/basic-checkbox-demo.html";
+import static com.sanchellios.selenium.demo.CheckBoxPageLocators.*;
 
-    @FindBy(css = "input#isAgeSelected")
+public class CheckboxPage extends Page {
+
+    @FindBy(css = SINGLE_CHECK_BOX_CSS)
     WebElement singleCheckBox;
 
-    @FindBy(xpath = "//label[text()[contains(.,'Click on this')]]")
-    WebElement singleBoxLabel;
-
-    @FindBy(css = "div#txtAge")
+    @FindBy(css = SINGLE_BOX_TEXT_CSS)
     WebElement singleBoxText;
 
-    @FindBy(css = "input#check1")
+    @FindBy(css = MULTI_CHECK_BOX_BUTTON_CSS)
     WebElement multiCheckboxButton;
 
     @FindAll({
@@ -32,11 +31,12 @@ public class CheckboxPage extends Page {
 
     public CheckboxPage(WebDriver driver) {
         super(driver);
+        navigateTo();
     }
 
     @Override
     public void navigateTo() {
-        driver.get(URL);
+        driver.get(Urls.CHECKBOX_PAGE_URL);
     }
 
     public void clickOnSingleCheckBox() {
@@ -44,7 +44,7 @@ public class CheckboxPage extends Page {
     }
 
     public void clickOnSingleBoxLabel() {
-        singleBoxLabel.click();
+        findByXpath(SINGLE_BOX_LABEL_XPATH).click();
     }
 
     public void clickOnMultiCheckboxButton() {
