@@ -6,6 +6,7 @@ object Urls {
     const val SELECT_DROPDOWN_PAGE_URL = "https://www.seleniumeasy.com/test/basic-select-dropdown-demo.html"
     const val SIMPLE_INPUT_PAGE_URL =  "https://www.seleniumeasy.com/test/basic-first-form-demo.html"
     const val RADIO_BUTTON_PAGE_URL = "https://www.seleniumeasy.com/test/basic-radiobutton-demo.html"
+    const val AJAX_FORM_SUBMIT_URL = "https://www.seleniumeasy.com/test/ajax-form-submit-demo.html"
 }
 
 object CheckBoxPageLocators {
@@ -72,4 +73,10 @@ object InputFormSubmitPageLocators {
     const val STATE_SELECT_CSS = "select[name=state]"
 
     const val SEND_BUTTON_CSS = "button.btn.btn-default"
+}
+
+object AjaxFormSubmitPageLocators {
+    const val NAME_FIELD_CSS = "input.form-control"
+    const val SUBMIT_BUTTON_CSS = "input.btn.btn-primary"
+    const val SUBMIT_CONTROL_LABEL_CSS = "div#submit-control"
 }
