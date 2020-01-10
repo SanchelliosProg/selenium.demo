@@ -51,7 +51,6 @@ public class InputFormSubmitPage extends Page {
 
     public InputFormSubmitPage(WebDriver driver) {
         super(driver);
-        navigateTo();
     }
 
     @Override

@@ -7,6 +7,9 @@ object Urls {
     const val SIMPLE_INPUT_PAGE_URL =  "https://www.seleniumeasy.com/test/basic-first-form-demo.html"
     const val RADIO_BUTTON_PAGE_URL = "https://www.seleniumeasy.com/test/basic-radiobutton-demo.html"
     const val AJAX_FORM_SUBMIT_URL = "https://www.seleniumeasy.com/test/ajax-form-submit-demo.html"
+    const val DRAG_AND_DROP_PAGE_URL = "https://www.seleniumeasy.com/test/drag-and-drop-demo.html"
+    const val LOADING_DATA_DYNAMICALLY_PAGE_URL = "https://www.seleniumeasy.com/test/dynamic-data-loading-demo.html"
+    const val JQUERY_SELECT_DROPDOWN_PAGE_URL = "https://www.seleniumeasy.com/test/jquery-dropdown-search-demo.html"
 }
 
 object CheckBoxPageLocators {
@@ -79,4 +82,22 @@ object AjaxFormSubmitPageLocators {
     const val NAME_FIELD_CSS = "input.form-control"
     const val SUBMIT_BUTTON_CSS = "input.btn.btn-primary"
     const val SUBMIT_CONTROL_LABEL_CSS = "div#submit-control"
+}
+
+object DragAndDropDemoLocators {
+    const val DRAGGABLE_ITEMS_CSS = "span[draggable=true]"
+    const val DROP_ZONE_CSS = "div#mydropzone"
+}
+
+object LoadingDataDynamicallyLocators {
+    const val GET_NEW_USER_BUTTON_CSS = "button.btn.btn-default"
+    const val IMAGE_CSS = "div#loading img"
+    const val BR_CSS = "div#loading br"
+}
+
+object JQuerySelectDropdownPageLocators {
+    const val SELECT_COUNTRY_SELECT_CSS = "select#country"
+    const val SELECT_COUNTRY_CONTAINER_CSS = "#select2-country-container"
+    const val SELECT_STATE_SELECT_CSS = "select.js-example-basic-multiple.select2-hidden-accessible"
+    const val LIST_OF_CHOSEN_STATES = "ul > li.select2-selection__choice"
 }

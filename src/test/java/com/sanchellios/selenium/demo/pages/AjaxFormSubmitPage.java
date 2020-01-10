@@ -19,7 +19,6 @@ public class AjaxFormSubmitPage extends Page {
 
     public AjaxFormSubmitPage(WebDriver driver) {
         super(driver);
-        navigateTo();
     }
 
     @Override
@@ -36,13 +35,13 @@ public class AjaxFormSubmitPage extends Page {
     }
 
     public boolean isSubmitControlLabelVisible() {
-        return findByCss(SUBMIT_CONTROL_LABEL_CSS).isDisplayed();
+        return findElementByCss(SUBMIT_CONTROL_LABEL_CSS).isDisplayed();
     }
 
     public boolean isSubmitButtonVisible() {
 
         try {
-            return findByCss(SUBMIT_BUTTON_CSS).isDisplayed();
+            return findElementByCss(SUBMIT_BUTTON_CSS).isDisplayed();
         } catch (org.openqa.selenium.NoSuchElementException e) {
             return false;
         }

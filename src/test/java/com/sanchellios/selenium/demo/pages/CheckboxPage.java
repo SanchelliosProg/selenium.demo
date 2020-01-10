@@ -31,7 +31,6 @@ public class CheckboxPage extends Page {
 
     public CheckboxPage(WebDriver driver) {
         super(driver);
-        navigateTo();
     }
 
     @Override

@@ -12,7 +12,6 @@ public class SelectDropdownPage extends Page {
 
     public SelectDropdownPage(WebDriver driver) {
         super(driver);
-        navigateTo();
     }
 
     @Override
@@ -21,12 +20,12 @@ public class SelectDropdownPage extends Page {
     }
 
     public void selectDay(String day) {
-        Select select = new Select(findByCss(DAY_SELECT_CSS));
+        Select select = new Select(findElementByCss(DAY_SELECT_CSS));
         select.selectByValue(day);
     }
 
     public void selectState(String state) {
-        Select select = new Select(findByCss(STATES_MULTI_SELECT_CSS));
+        Select select = new Select(findElementByCss(STATES_MULTI_SELECT_CSS));
         if (state.equals("all")) {
             for(WebElement e : select.getOptions()) {
                 select.selectByValue(e.getText());
@@ -38,19 +37,19 @@ public class SelectDropdownPage extends Page {
     }
 
     public String getTextOfSelectedValueLabel() {
-        return findByCss(SELECTED_VALUE_LABEL_CSS).getText();
+        return findElementByCss(SELECTED_VALUE_LABEL_CSS).getText();
     }
 
     public String getTextOfMultiSelectedValueLabel() {
-        return findByCss(MULTI_SELECTED_VALUE_LABEL_CSS).getText();
+        return findElementByCss(MULTI_SELECTED_VALUE_LABEL_CSS).getText();
     }
 
     public void pressFirstSelectedButton() {
-        findByCss(FIRST_SELECTED_BUTTON_CSS).click();
+        findElementByCss(FIRST_SELECTED_BUTTON_CSS).click();
     }
 
     public void pressGetAllSelectedButton() {
-        findByCss(GET_ALL_SELECTED_BUTTON_CSS).click();
+        findElementByCss(GET_ALL_SELECTED_BUTTON_CSS).click();
     }
 
 }

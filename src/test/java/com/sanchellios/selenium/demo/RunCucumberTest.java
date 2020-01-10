@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/java/com/sanchellios/selenium/demo/features"},
         plugin = {"pretty"}
-//        , tags = {"@ajax-form-submit"}
+        , tags = {"@jquery-select-dropdown"}
         )
 public class RunCucumberTest {
     private static Logger log = LogManager.getLogger();
